@@ -1,0 +1,41 @@
+192.168.20.0/24
+Sales: 29 hosts -> 62 hosts
+Dev: 23 hosts -> 62 hosts
+Administration: 18 hosts -> 30 hosts
+IT: 12 hosts -> 14 hosts
+Manage: 10 hosts -> 14 hosts
+HR: 6 hosts -> 14 hosts
+Server Room : 5 Server -> 6 hosts
+Meeting rooms: 3 host -> 6 hosts
+DMZ Server: 2 Server -> 6 hosts
+
+Manage Network: Ground (2 x Switches, 2 x APs), 1st Floor (1 x Switch, 2 x AP), 2nd Floor (3 x APs) = required 9 but alloc16 IP address block
+
+		2	4	8	16	32	64	128	256
+		128	192	224	240	248	252	254	255
+PREFIX: 	/25	/26	/27	/28	/29	/30	/31	/32
+BIT POSITION: 	1	2	3	4	5	6	7	8
+BLOCK:		128	64	32	16	8	4	0	0
+USABLE IPs:	126	62	30	14	6	2	0	0
+			
+192.168.20.0/24
+Sales		192.168.20.0/26 (192.168.20.1-192.168.20.62) 192.168.20.63 broadcast IP
+Dev		192.168.20.64/26 (192.168.20.65-192.168.20.126) 192.168.20.127 broadcast IP
+Administration	192.168.20.128/27 (192.168.20.129-192.168.20.158) 192.168.20.159 broadcast IP
+IT		192.168.20.160/28 (192.168.20.161-192.168.20.174) 192.168.20.175 broadcast IP
+Manage		192.168.20.176/28 (192.168.20.177-192.168.20.190) 192.168.20.191 broadcast IP
+HR		192.168.20.192/28 (192.168.20.193-192.168.20.206) 192.168.20.207 broadcast IP
+Server R.	192.168.20.208/29 (192.168.20.209-192.168.20.214) 192.168.20.215 broadcast IP
+MEE		192.168.20.216/29 (192.168.20.217-192.168.20.222) 192.168.20.223 broadcast IP
+DMZ		192.168.20.224/29 (192.168.20.225-192.168.20.230) 192.168.20.231 broadcast IP
+
+
+Sales 	192.168.20.0/26
+Dev	192.168.20.64/26
+Admin	192.168.20.128/27
+IT	192.168.20.160/27
+Manage	192.168.20.176/28
+HR	192.168.20.192/28
+S.R.	192.168.20.208/29
+MEE	192.168.20.216/29
+DMZ	192.168.20.224/29
